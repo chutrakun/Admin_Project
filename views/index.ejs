@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f3f3f3;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #38b6ff;
+      color: white;
+    }
+    .topbar img {
+      height: 40px;
+    }
+    .topbar h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .navbar {
+      background-color: #04878a;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+      color: white;
+    }
+    .navbar a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+    .container {
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background: #ddf8fa;
+      padding: 15px;
+      border-right: 1px solid #ccc;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #e6f7ff;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    .section-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .card:hover {
+      background-color: #e6f7ff;
+      transform: scale(1.03);
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .stat-box {
+      flex: 1;
+      background: white;
+      margin: 5px;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .charts {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .chart-box {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <img src="/public/img/Logo.png" alt="Logo">
+    <h1>Hospital Management System</h1>
+    <div>
+      <a href="#user-profile"><img src="/public/img/icon.png" alt="User Icon" height="30"></a>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">แผนกจ่ายยา</a>
+    <a href="#">แผนกผู้ป่วยใน</a>
+    <a href="#">แผนกผู้ป่วยนอก</a>
+    <a href="#">แผนกเวชบ้าน</a>
+    <a href="#">แผนกคลัง</a>
+    <a href="#">แผนกทะเบียน</a>
+    <a href="#">แผนกฉุกเฉิน</a>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Admin Station</h3>
+      <ul>
+        <li><a href="#staff">บุคลากรทางการแพทย์</a></li>
+        <li><a href="#patients">ผู้ป่วย</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#foods">Foods</a></li>
+        <li><a href="#food-detail">Food Detail</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#notifications">การแจ้งเตือน</a></li>
+        <li><a href="#backup">การสำรองข้อมูล</a></li>
+        <li><a href="#report">ออกรายงาน</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="main">
+      <div class="section-image">
+        <img src="https://www.chiangrai108.com/wp-content/uploads/2022/10/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B9%89%E0%B8%87.jpg" alt="Hospital Building">
+      </div> 
+
+      <div class="cards">
+        <div class="card"><a href="#register">Register</a></div>
+        <div class="card"><a href="#report">Report</a></div>
+        <div class="card"><a href="#user">User</a></div>
+        <div class="card"><a href="#patient">Patient</a></div>
+        <div class="card"><a href="#backup">Backup</a></div>
+        <div class="card"><a href="#notification">Notification</a></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box">
+          <h2>75</h2>
+          <p>Total Orders</p>
+        </div>
+        <div class="stat-box">
+          <h2>357</h2>
+          <p>Total Delivered</p>
+        </div>
+        <div class="stat-box">
+          <h2>65</h2>
+          <p>Total Canceled</p>
+        </div>
+        <div class="stat-box">
+          <h2>$128</h2>
+          <p>Total Revenue</p>
+        </div>
+      </div>
+
+      <div class="charts">
+        <div class="chart-box">
+          <h3>ผลการรักษา</h3>
+          <p>Total Order - 81%</p>
+          <p>Customer Growth - 22%</p>
+          <p>Total Revenue - 62%</p>
+        </div>
+
+        <div class="chart-box">
+          <h3>ยอดผู้ป่วยที่เข้าใช้บริการ</h3>
+          <p>กราฟแสดงข้อมูลผู้ป่วยรายวัน</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
