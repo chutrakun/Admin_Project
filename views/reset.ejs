@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSUP | Reset Password</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background-image: url('https://files.ejan.co/wp-content/uploads/2023/12/317276575_5579174618870137_5468441117525775814_n.jpg');
+            background-size: cover;
+            background-position: 40%;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        button[type="submit"] {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+
+<div class="container-fluid mt-0">
+    <div class="row mt-3 justify-content-center pt-5">
+        <div class="col-xl-3 col-lg-6 col-sm-7 col-10 pt-4 px-5 rounded-4 border align-self-center bg-light mt-4">
+            <div class="text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu7nMhqiZLkgWSeS8Y1-Mbs0ILsrgt1S0HRA&s" alt="โลโก้โรงพยาบาล" class="img-fluid mb-3" style="max-width: 100px;">
+            </div>
+            <h3 class="display-6 text-center fw-normal">รีเซ็ตรหัสผ่าน</h3>
+
+            <form method="post" action="/reset-password/submit" onsubmit="return validateResetForm()">
+                <div class="form-group my-2">
+                    <label>Username :</label>
+                    <input type="text" name="username" class="form-control" required>
+                </div>
+                <div class="form-group my-2">
+                    <label>รหัสผ่านใหม่ :</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+                <div class="form-group my-2">
+                    <label>ยืนยันรหัสผ่านใหม่ :</label>
+                    <input type="password" id="confirm_password" class="form-control" required>
+                </div>
+
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn text-white btn-lg" style="background-color:#845EC2">Reset Password</button>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <p>กลับไปที่&nbsp;</p>
+                    <a href="/login" class="text-dark fw-bolder">หน้าเข้าสู่ระบบ</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validateResetForm() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm_password').value;
+
+        if (password !== confirmPassword) {
+            alert('รหัสผ่านไม่ตรงกัน');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>

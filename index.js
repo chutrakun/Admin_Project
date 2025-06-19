@@ -27,7 +27,8 @@ const pool = new Pool({
 const indexControllers = require('./controllers/indexControllers')
 const loginControllers = require('./controllers/loginControllers')
 const registerControllers = require('./controllers/registerControllers')
-
+const resetControllers = require('./controllers/resetControllers')
+const userControllers = require('./controllers/userControllers')
 
 app.use(express.static('public'))
 app.use(express.json())
@@ -38,6 +39,8 @@ app.set('view engine', 'ejs')
 app.get('/', indexControllers)
 app.get('/login', loginControllers)
 app.get('/register', registerControllers)
+app.get('/reset', resetControllers)
+app.get('/user', userControllers)
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     console.log("Login Attempt:", username, password);

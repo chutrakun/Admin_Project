@@ -139,13 +139,14 @@
     <a href="#">แผนกคลัง</a>
     <a href="#">แผนกทะเบียน</a>
     <a href="#">แผนกฉุกเฉิน</a>
+    <a href="/register"#">Register</a>
   </div>
 
   <div class="container">
     <div class="sidebar">
       <h3>Admin Station</h3>
       <ul>
-        <li><a href="/user">บุคลากรทางการแพทย์</a></li>
+        <li><a href="#staff">บุคลากรทางการแพทย์</a></li>
         <li><a href="#patients">ผู้ป่วย</a></li>
         <li><a href="#analytics">Analytics</a></li>
         <li><a href="#reviews">Reviews</a></li>
@@ -158,54 +159,53 @@
       </ul>
     </div>
 
-    
     <div class="main">
-      <div class="section-image">
-        <img src="img/main.png" alt="Hospital Building">
-      </div> 
+  <h2>รายชื่อผู้ใช้งานระบบ</h2>
+  <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <thead style="background-color: #f2f2f2;">
+        <tr style="text-align: left;">
+          <th style="padding: 12px;">Name</th>
+          <th style="padding: 12px;">Username</th>
+          <th style="padding: 12px;">Phone Number</th>
+          <th style="padding: 12px;">Email</th>
+          <th style="padding: 12px;">Group</th>
+          <th style="padding: 12px;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 12px;">Chioke Okonkwo</td>
+          <td style="padding: 12px;">blueladybug463</td>
+          <td style="padding: 12px;">(629) 555-0129</td>
+          <td style="padding: 12px;">hopkins@example.com</td>
+          <td style="padding: 12px;">Administrators</td>
+          <td style="padding: 12px;"><span style="color: green;">Active</span></td>
+        </tr>
+        <tr>
+          <td style="padding: 12px;">Ronald Webb</td>
+          <td style="padding: 12px;">bluebear285</td>
+          <td style="padding: 12px;">(843) 555-0130</td>
+          <td style="padding: 12px;">max@example.com</td>
+          <td style="padding: 12px;">Back Office</td>
+          <td style="padding: 12px;"><span style="color: gray;">Inactive</span></td>
+        </tr>
+        <tr>
+          <td style="padding: 12px;">Lily Miles</td>
+          <td style="padding: 12px;">tinyleopard720</td>
+          <td style="padding: 12px;">(239) 555-0108</td>
+          <td style="padding: 12px;">max@example.com</td>
+          <td style="padding: 12px;">Administrators</td>
+          <td style="padding: 12px;"><span style="color: green;">Active</span></td>
+        </tr>
+        <!-- เพิ่มแถวอื่นๆ ตามต้องการ -->
+      </tbody>
+    </table>
+  </div>
+</div>
 
-      <div class="cards">
-        <div class="card"><a href="/register">Register</a></div>
-        <div class="card"><a href="#report">Report</a></div>
-        <div class="card"><a href="#user">User</a></div>
-        <div class="card"><a href="#patient">Patient</a></div>
-        <div class="card"><a href="#backup">Backup</a></div>
-        <div class="card"><a href="#notification">Notification</a></div>
-      </div>
-
-      <div class="stats">
-        <div class="stat-box">
-          <h2>75</h2>
-          <p>Total Orders</p>
-        </div>
-        <div class="stat-box">
-          <h2>357</h2>
-          <p>Total Delivered</p>
-        </div>
-        <div class="stat-box">
-          <h2>65</h2>
-          <p>Total Canceled</p>
-        </div>
-        <div class="stat-box">
-          <h2>$128</h2>
-          <p>Total Revenue</p>
-        </div>
-      </div>
-
-      <div class="charts">
-        <div class="chart-box">
-          <h3>ผลการรักษา</h3>
-          <p>Total Order - 81%</p>
-          <p>Customer Growth - 22%</p>
-          <p>Total Revenue - 62%</p>
-        </div>
-
-        <div class="chart-box">
-          <h3>ยอดผู้ป่วยที่เข้าใช้บริการ</h3>
-          <p>กราฟแสดงข้อมูลผู้ป่วยรายวัน</p>
-        </div>
-      </div>
-    </div>
+    
+    
   </div>
 </body>
 </html>
